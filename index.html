@@ -171,7 +171,6 @@
         <a href="index.html" class="logo">💡 SOS Cidadão</a>
         <nav>
             <a href="#solucoes">Soluções</a>
-            <a href="#">Sobre</a>
         </nav>
     </header>
 
@@ -179,8 +178,8 @@
         <h1>O que você precisa resolver hoje?</h1>
         <p>Guias práticos e sem enrolação para ajudar você a resolver os perrengues mais comuns do Brasil.</p>
         <div class="search-container">
-            <input type="text" placeholder="Ex: Como recuperar dinheiro do golpe do pix...">
-            <button>Buscar</button>
+            <input type="text" id="campo-busca" placeholder="Ex: Pix, Dívidas, Nome limpo...">
+            <button onclick="buscarProblema()">Buscar</button>
         </div>
     </section>
 
@@ -188,7 +187,7 @@
         <h2 class="section-title">Guias de Soluções Rápidas</h2>
         
         <div class="grid">
-            <!-- Card Segurança (Linkado para o Artigo) -->
+            <!-- Card Segurança -->
             <div class="card">
                 <div class="card-content">
                     <div class="card-icon">🚨</div>
@@ -198,14 +197,14 @@
                 <a class="btn" href="artigo-golpe-pix.html">Ver passo a passo →</a>
             </div>
 
-            <!-- Card Finanças -->
+            <!-- Card Finanças (AGORA FUNCIONANDO!) -->
             <div class="card">
                 <div class="card-content">
                     <div class="card-icon">💸</div>
                     <h3>Negociar Dívidas e Nome Limpo</h3>
                     <p>Como usar as plataformas oficiais do governo e feirões limpa nome para quitar dívidas com até 90% de desconto.</p>
                 </div>
-                <a class="btn" href="#">Em breve →</a>
+                <a class="btn" href="artigo-dividas.html">Limpar meu nome →</a>
             </div>
 
             <!-- Card Burocracia -->
@@ -223,6 +222,20 @@
     <footer>
         <p>&copy; 2026 SOS Cidadão - Soluções para o dia a dia. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+    function buscarProblema() {
+        var termo = document.getElementById('campo-busca').value.toLowerCase();
+        
+        if (termo.includes('pix') || termo.includes('golpe') || termo.includes('med')) {
+            window.location.href = 'artigo-golpe-pix.html';
+        } else if (termo.includes('divida') || termo.includes('dívida') || termo.includes('nome') || termo.includes('limpar') || termo.includes('serasa')) {
+            window.location.href = 'artigo-dividas.html';
+        } else {
+            alert('Guia não encontrado ainda. Tente buscar por: "Pix" ou "Dívidas".');
+        }
+    }
+    </script>
 
 </body>
 </html>
