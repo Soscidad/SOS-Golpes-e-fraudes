@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Cidadão | Soluções para os Problemas do Dia a Dia</title>
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #28a745;
+            --dark: #212529;
+            --light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            margin-left: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0056b3 0%, #002244 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .search-container input {
+            flex: 1;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-container button {
+            padding: 0.8rem 2rem;
+            border: none;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 0 25px 25px 0;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-content {
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            color: var(--secondary);
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">💡 SOS Cidadão</a>
+        <nav>
+            <a href="#solucoes">Soluções</a>
+            <a href="#">Sobre</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>O que você precisa resolver hoje?</h1>
+        <p>Guias práticos e sem enrolação para ajudar você a resolver os perrengues mais comuns do Brasil.</p>
+        <div class="search-container">
+            <input type="text" placeholder="Ex: Como recuperar dinheiro do golpe do pix...">
+            <button>Buscar</button>
+        </div>
+    </section>
+
+    <main class="container" id="solucoes">
+        <h2 class="section-title">Guias de Soluções Rápidas</h2>
+        
+        <div class="grid">
+            <!-- Card Segurança (Linkado para o Artigo) -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon">🚨</div>
+                    <h3>Caiu no Golpe do Pix?</h3>
+                    <p>Aprenda a ativar o Mecanismo Especial de Devolução (MED) do Banco Central para tentar recuperar o seu dinheiro imediatamente.</p>
+                </div>
+                <a class="btn" href="artigo-golpe-pix.html">Ver passo a passo →</a>
+            </div>
+
+            <!-- Card Finanças -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon">💸</div>
+                    <h3>Negociar Dívidas e Nome Limpo</h3>
+                    <p>Como usar as plataformas oficiais do governo e feirões limpa nome para quitar dívidas com até 90% de desconto.</p>
+                </div>
+                <a class="btn" href="#">Em breve →</a>
+            </div>
+
+            <!-- Card Burocracia -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon">📄</div>
+                    <h3>Direitos, INSS e FGTS</h3>
+                    <p>Passo a passo para consultar saldos esquecidos, dar entrada em auxílios e agendar serviços públicos sem pegar filas.</p>
+                </div>
+                <a class="btn" href="#">Em breve →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SOS Cidadão - Soluções para o dia a dia. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
